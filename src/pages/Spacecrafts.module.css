@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.createLink {
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.spacecraft {
+    width: 80%;
+    height: auto;
+    padding: 1.5rem;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #2176dd56;
+}
+.spacecraft img {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+.spacecraft p {
+    margin-top: 1rem;
+}
+
+.actionRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.moreLinkSpacecraft {
+    align-self: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.521);
+}
+.destroyButton, .createLink{
+    display: block;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 8px 15px;
+    width: fit-content;
+    font-size: 0.8rem;
+}
+
+/* Effects */
+.createLink:hover {
+    border-color: #eaff00b8;
+    background-color: #eaff0035;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.destroyButton:hover {
+    border-color: #ff0000b7;
+    background-color: #ff000035;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.moreLinkSpacecraft:hover {
+    color: white;
+    transition: color 0.3s ease;
+}

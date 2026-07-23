@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; 
+    width: 80%;
+}
+
+.spacecraftDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    gap: 1rem;
+}
+.spacecraftDetails img {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+.spacecraftDetails h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+.spacecraftDetails hr {
+    width: 95%;
+    border: 1px solid #cccccc52;
+    margin: 0;
+}
+.spacecraftDetails p {
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+.spacecraftDetails :last-child {
+    text-align: left;
+    font-size: 1rem;
+}

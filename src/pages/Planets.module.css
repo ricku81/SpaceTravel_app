@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.planet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 17rem;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.planetInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 95%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    z-index: 1;
+}
+.planetInfo img {
+    text-align: center;
+    display: block;
+    width: auto;
+    height: 8rem;
+    padding: 5px;
+}
+.planetInfo h2{
+    text-align: center;
+    margin: 10px 0;
+}
+.planetInfo h2:last-child {
+    margin: 0;
+}
+
+.dockedShips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 70%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    border-radius: 8px;
+    background-color: #2176dd56;
+}
+.ship {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    width: 20%;
+    height: 4rem;
+    border: 1px solid white;
+    border-radius: 20%;
+}
+
+/* Effects */
+.planetInfo:hover {
+    cursor: pointer;
+    border-color: #eaff00b8;
+    background-color: #eaff0035;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.ship:hover {
+    cursor: pointer;
+    color: white;
+    border-color: #eaff00b8;
+    background-color: #eaff0035;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.planetInfo:focus {
+    border-color: #ff7b00;
+    background-color: #ff7b0035;
+}
+.ship:focus {
+    border-color: #ff7b00;
+    background-color: #ff7b0035;
+    color: white;
+}
