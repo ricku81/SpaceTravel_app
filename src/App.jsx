@@ -8,5 +8,3 @@ function App() {
 export default App;
 
 // Render.com can be used to deploy this React application easily. Vercel.com as well
-// Let them take me to the code in a project walkthrough.
-// What stack was used for this project? MERN

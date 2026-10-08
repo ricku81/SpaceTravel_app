@@ -20,7 +20,7 @@ export const StatesProvider = ({ children }) => {
 			return;
 		}
 
-		setPlanets(response.data ?? []);
+		setPlanets(response.data ?? []); // Update the planets state with the fetched data, or an empty array if no data is returned using the nullish coalescing operator --> ??
 	};
 
 	const refreshSpacecrafts = async () => { // Fetch the latest list of spacecrafts from the API and update the state accordingly.
@@ -96,8 +96,12 @@ export const StatesProvider = ({ children }) => {
 	}, []);
 
 	useEffect(() => { // Move the focused spacecraft to the focused planet whenever both are selected.
+		if (focusedShipId === null || focusedPlanetId === null) {
+			return; // Do nothing if either the focused ship or planet is not selected.
+		}
+
 		moveSpacecraft(focusedShipId, focusedPlanetId);
-	}, [focusedShipId && focusedPlanetId]);
+	}, [focusedShipId, focusedPlanetId]);
 
 	const value = useMemo( // Memoize the context value to optimize performance and prevent unnecessary re-renders.
 		() => ({

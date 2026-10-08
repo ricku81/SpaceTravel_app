@@ -23,7 +23,7 @@ const Planets = () => { // Display a list of planets and docked ships
         <div key={id} className={styles.planet}>
 
           {/* Planet information section */}
-          <button className={styles.planetInfo} onFocus={(e) => { console.log(`Focused on planet ${id}`); setFocusedPlanetId(id) }}> 
+          <button className={styles.planetInfo} onClick={() => { setFocusedPlanetId(id) }}> 
             <img src={pictureUrl} alt={name}/>
             <h2>Name: {name}</h2>
             <h2>Current Population:</h2>
@@ -33,7 +33,7 @@ const Planets = () => { // Display a list of planets and docked ships
           {/* Docked ships section */}
           <div className={styles.dockedShips}>
             {dockedShips(id).map(({ id: shipId, name: shipName, capacity }) => (
-              shipId && <button key={shipId} className={styles.ship} onFocus= { (e) => {console.log(`Focused on ship ${shipId}`); setFocusedShipId(shipId) }}>
+              shipId && <button key={shipId} className={styles.ship} onClick={() => { setFocusedPlanetId(null); setFocusedShipId(shipId) }}>
                 <p>{shipName}</p>
                 <p>{capacity}</p>
               </button>
